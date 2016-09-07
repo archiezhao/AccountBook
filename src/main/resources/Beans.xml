@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="accountBookServices" class="com.awesomeapp.finance.services.AccountBookServices">
+       <property name="calculatorClass" ref="accountBookCalculator"/>
+       <property name="categoryClass" ref="accountBookCategory"/>
+       <property name="queryClass" ref="accountBookQuery"/>
+       <property name="userClass" ref="accountBookUser"/>
+       <property name="transactionClass" ref="accountBookTransaction"/>
+   </bean>
+   
+   <bean id="accountBookCalculator" class="com.awesomeapp.finance.services.AccountBookCalculator"></bean>
+   <bean id="accountBookCategory" class="com.awesomeapp.finance.services.AccountBookCategory"></bean>
+   <bean id="accountBookQuery" class="com.awesomeapp.finance.services.AccountBookQuery"></bean>
+   <bean id="accountBookUser" class="com.awesomeapp.finance.services.AccountBookUser"></bean>
+   <bean id="accountBookTransaction" class="com.awesomeapp.finance.services.AccountBookTransaction"></bean>
+
+</beans>
