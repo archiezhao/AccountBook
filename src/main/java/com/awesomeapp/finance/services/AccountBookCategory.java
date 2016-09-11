@@ -56,7 +56,7 @@ public class AccountBookCategory {
 		}
 		/* Check if the categoryname has been taken */
 		if(getCategoryByCategoryname(categoryname, null) != null) {
-			message.setErrorMessage("Error creating category: the provided categoryname has already been taken");
+			if(message != null) message.setErrorMessage("Error creating category: the provided categoryname has already been taken");
 			return null;
 		}
 		/* Validate the user */

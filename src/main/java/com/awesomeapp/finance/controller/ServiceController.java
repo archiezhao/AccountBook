@@ -28,7 +28,7 @@ public class ServiceController {
 		obj = (AccountBookServices) context.getBean("accountBookServices");
 	}
 	
-	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
 	public String addUser(@RequestParam("username") String username) {
 		User user = obj.abUser.createUser(username, null);
 		if(user == null) {
@@ -37,7 +37,7 @@ public class ServiceController {
 		return "The user created successfully";
 	}
 	
-	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
 	public String deleteUser(@RequestParam("username") String username) {
 		User user = obj.abUser.getUserByUsername(username, null);
 		if(user == null) {
@@ -52,7 +52,7 @@ public class ServiceController {
 		}	
 	}
 	
-	@RequestMapping(value = "/addCategory", method = RequestMethod.GET)
+	@RequestMapping(value = "/addCategory", method = RequestMethod.POST)
 	public String addCategory(@RequestParam("username") String username,
 							  @RequestParam("categoryname") String categoryname) {
 		User user = obj.abUser.getUserByUsername(username, null);
@@ -66,7 +66,7 @@ public class ServiceController {
 		return "The category created successfully";
 	}
 	
-	@RequestMapping(value = "/deleteCategory", method = RequestMethod.GET)
+	@RequestMapping(value = "/deleteCategory", method = RequestMethod.POST)
 	public String deleteCategory(@RequestParam("categoryname") String categoryname,
 								 @RequestParam("username") String username) {
 		User user = obj.abUser.getUserByUsername(username, null);
@@ -86,7 +86,7 @@ public class ServiceController {
 		}	
 	}
 	
-	@RequestMapping(value = "/addTransaction", method = RequestMethod.GET)
+	@RequestMapping(value = "/addTransaction", method = RequestMethod.POST)
 	public String addTransaction(@RequestParam("title") String title,
 							  	 @RequestParam("note") String note,
 							  	 @RequestParam("amount") String amount,
@@ -123,7 +123,7 @@ public class ServiceController {
 		}
 	}
 	
-	@RequestMapping(value = "/updateTransaction", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateTransaction", method = RequestMethod.POST)
 	public String updateTransaction(@RequestParam("transactionid") String transactionid,
 									@RequestParam("title") String title,
 									@RequestParam("note") String note,
@@ -166,7 +166,7 @@ public class ServiceController {
 		}
 	}
 	
-	@RequestMapping(value = "/deleteTransaction", method = RequestMethod.GET)
+	@RequestMapping(value = "/deleteTransaction", method = RequestMethod.POST)
 	public String deleteTransaction(@RequestParam("transactionid") String transactionid,
 									@RequestParam("username") String username) {
 		/* Get the user by username */

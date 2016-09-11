@@ -1,0 +1,312 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AccountBook",
+		"_postman_id": "768ed8fc-68b1-5a53-7127-ea9219b2fbc2",
+		"description": "The requests for accountBook web service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/addUser",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to add a user to accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/deleteUser",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to delete a user from accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "addCategory",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/addCategory",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "grocery",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to add a category to accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/deleteCategory",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "categoryname",
+							"value": "grocery",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to delete a category from accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "addTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/addTransaction",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "apple",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "note",
+							"value": "This is a great apple",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "amount",
+							"value": "10",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "type",
+							"value": "debit",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "category",
+							"value": "grocery",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to add a transacion to accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "updateTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/updateTransaction",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transactionid",
+							"value": "4",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "title",
+							"value": "apple",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "note",
+							"value": "This is a great apple",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "amount",
+							"value": "15",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "type",
+							"value": "debit",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "category",
+							"value": "grocery",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to update a transacion to accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/deleteTransaction",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transactionid",
+							"value": "5",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "This reqeust is used to delete a transacion from accountBook."
+			},
+			"response": []
+		},
+		{
+			"name": "searchTransactionByDate",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/searchTransactionByDate?date=09-11-2016&username=abc&category=grocery",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "This reqeust is used to search the transacions from accountBook for a given date."
+			},
+			"response": []
+		},
+		{
+			"name": "searchTransactionByDateRange",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/searchTransactionByDateRange?startdate=09-06-2016&enddate=09-20-2016&username=abc&category=grocery",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "This reqeust is used to search the transacions from accountBook for a range of date."
+			},
+			"response": []
+		},
+		{
+			"name": "totalTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/totalTransaction?startdate=09-06-2016&enddate=09-20-2016&username=abc&category=grocery",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "This reqeust is used to calculate the total transacions from accountBook for a range of date."
+			},
+			"response": []
+		},
+		{
+			"name": "totalDebitTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/totalDebitTransaction?startdate=09-06-2016&enddate=09-20-2016&username=abc&category=grocery",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "This reqeust is used to calculate the total debit transacions from accountBook for a range of date."
+			},
+			"response": []
+		},
+		{
+			"name": "totalCreditTransaction",
+			"request": {
+				"url": "https://jianqizhao.com/accountBook/service/totalCreditTransaction?startdate=09-06-2016&enddate=09-20-2016&username=abc&category=grocery",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "This reqeust is used to calculate the total credit transacions from accountBook for a range of date."
+			},
+			"response": []
+		}
+	]
+}
