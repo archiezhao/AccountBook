@@ -13,7 +13,7 @@ Category (A category that the transactions belongs to, such as "grocery"):
 -addCategory: Add a category to the database, a category must associate with a user.  
 -deleteCategory: Delete a category from the database and CLEAR ALL CONTENTS FOR THIS CATEGORY.  
 
-Transaction (A transaction you made, can be either "debit" or "credit", it helps you keep track of the money you spent or earned)
+Transaction (A transaction you made, can be either "debit" or "credit", it helps you keep track of the money you spent or earned):  
 -addTransaction: Add a transaction to the database, a transaction must associate with a user and a category.  
 -updateTransaction: Update each field of an existing transaction.  
 -deleteTransaction: Delete a transaction from the database.  
